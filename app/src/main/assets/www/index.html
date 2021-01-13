@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>JSSQLiteAndroidThings</title>
+    </head>
+    
+    <body class="container">
+        <!-- Separator -->
+        <div class="row mt-3"></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalAddForm" role="dialog">
+            <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <!-- Modal header -->
+                    <div class="modal-header text-center">
+                        <h4 id="modalHeader" class="modal-title w-100 font-weight-bold"></h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearForm()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="/names" method="POST" id="nameForm">
+                        <div class="modal-body">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last name">
+                            </div>
+                        </div>
+                        
+                        <div class="modal-footer justify-content-center">
+                            <a class="btn" data-dismiss="modal" onclick="clearForm()" href="javascript:void(0);">Close</a>
+                            <a id="SaveButton" class="btn btn-primary">Save changes</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trigger the modal with a button -->
+        <div class="text-right">
+            <a href="" class="btn btn-info btn-lg" data-toggle="modal" onclick="showCreateModal()">Add New Person</a>
+        </div>
+
+        <!-- Separator -->
+        <div class="row mt-3"></div>
+        
+        <!-- Persons table -->
+        <table id="namesTable" class="table table-hover">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Actions</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="/static/js/functions.js"></script>
+    </body>
+</html>

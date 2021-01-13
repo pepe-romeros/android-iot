@@ -1,0 +1,9 @@
+com.example.app
+com.example.app.db
+com.example.app.model
+com.example.app.repository
+com.example.app.service
+com.example.app.web
+com.example.app.web.base
+com.example.app.web.util
+com.example.app.web.util.model
